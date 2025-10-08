@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# API Keys and secrets
+secrets.toml
+.env
+*.key
+*.pem
+config.py
+
+# Data files
+*.csv
+*.xlsx
+*.xls
