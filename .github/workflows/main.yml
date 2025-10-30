@@ -1,0 +1,24 @@
+ame: Code style
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # - name: Instalar UV
+      #   run: <comando de instalación de UV>
+      - name: ruff check
+        run: V run ruff check
+      - name: ruff format
+        run: V run ruff format
+      - name: mypy
+        run: V run mypy src
+      - name: pytest
+        run: V run pytest -n auto
